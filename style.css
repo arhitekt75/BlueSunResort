@@ -157,7 +157,7 @@ li {
 }
 
 .box {
-    max-width: 400px;
+    width: 400px;
     margin: 1em;
     border: 1px solid #fff;
 }
@@ -172,8 +172,10 @@ li {
 .offers {
     width: 100%;
     padding: 2em;
-    display: flex;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 5rem;
+    align-items:start;
     justify-content: space-between;
 }
 
@@ -190,7 +192,6 @@ li {
  }
 
 .left-box {
-    max-width: 700px;
     margin-right: 1em;
     margin-top: 1em;
     margin-bottom: 4em;
@@ -219,7 +220,6 @@ li {
 }
 
 .right-box {
-    max-width: 300px;
     margin-top: 1em;
     margin-bottom: 1em;
     padding: 10px 0;
@@ -285,5 +285,11 @@ footer {
     100% {
         transform: translateX(0);
         opacity: 1;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .offers {
+        grid-template-columns: 1fr;
     }
 }
